@@ -51,7 +51,10 @@ const NavBar = ({ flexBetween, selectedPage, setSelectedPage }: Props) => {
                 <div className="py-2">
                   <Link to="/about-hygo" className="block px-4 py-2 hover:bg-gray-100">
                     About HYGO
+                  </Link> <Link to="/Founding Team" className="block px-4 py-2 hover:bg-gray-100">
+                    Founding Team
                   </Link>
+        
                   <Link to="/our-mission" className="block px-4 py-2 hover:bg-gray-100">
                     Our Mission
                   </Link>
@@ -117,6 +120,9 @@ const NavBar = ({ flexBetween, selectedPage, setSelectedPage }: Props) => {
                   </Link>
                   <Link to="/aboutHYGO" className="hover:text-[#4A44BE]" onClick={() => setIsMenuToggled(false)}>
                     About HYGO
+                  </Link>
+                  <Link to="/FoundingTeam" className="hover:text-[#4A44BE]" onClick={() => setIsMenuToggled(false)}>
+                    Founding Team
                   </Link>
                   <Link to="/our-mission" className="hover:text-[#4A44BE]" onClick={() => setIsMenuToggled(false)}>
                     Our Mission

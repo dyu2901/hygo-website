@@ -58,9 +58,9 @@ export const descNums = [
 export const ServicesData = [
   {
     img: healthcare,
-    title: "Healthcare",
-    id: "healthcare",
-    heading: "Healthcare Department",
+    title: "Genral Checkup",
+    id: "generalcheckup", 
+    heading: "General Checkup Department",
     color: "#4A44BE",
     texts: [
       "Primary care and family medicine",
@@ -74,9 +74,9 @@ export const ServicesData = [
   },
   {
     img: cardiology,
-    title: "Cardiology",
-    id: "cardiology",
-    heading: "Cardiology Department",
+    title: "Pathology",
+    id: "pathology",
+    heading: "Pathology Department",
     texts: [
       "Electrocardiogram (ECG)",
       "Echocardiogram",
@@ -91,9 +91,9 @@ export const ServicesData = [
   },
   {
     img: orthopedics,
-    title: "Orthopedics",
-    id: "orthopedics",
-    heading: "Orthopedics Department",
+    title: "Physiotherapy",
+    id: "physiotherapy",
+    heading: "Physiotherapy Department",
     texts: [
       "Orthopedic surgery and joint replacements",
       "Sports injury and trauma care",
@@ -106,9 +106,9 @@ export const ServicesData = [
   },
   {
     img: surgery,
-    title: "Surgery",
-    id: "surgery",
-    heading: "Surgery Department",
+    title: "Clinical Nutricion",
+    id: "clinicalnutrition",
+    heading: "Clinical Nutrition Department",
     texts: [
       "Minimally invasive and laparoscopic surgery",
       "Gastrointestinal surgery and endoscopy",
@@ -121,9 +121,9 @@ export const ServicesData = [
   },
   {
     img: dentistry,
-    title: "Dentistry",
-    id: "dentistry",
-    heading: "Dentistry Department",
+    title: "Home Care",
+    id: "homecare",
+    heading: "Home Care Department",
     texts: [
       "Routine dental check-ups and cleanings",
       "Cosmetic dentistry and teeth whitening",
@@ -136,9 +136,9 @@ export const ServicesData = [
   },
   {
     img: radiology,
-    title: "Radiology",
-    id: "radiology",
-    heading: "Radiology Department",
+    title: "Visiting Doctor OPD",
+    id: "visitingdoctoropd",
+    heading: "Visiting Doctor OPD Department",
     texts: [
       "Advanced diagnostic imaging services",
       "Mammography and breast health screening",
@@ -166,9 +166,24 @@ export const ServicesData = [
   },
   {
     img: medicine,
-    title: "Medicine",
-    id: "medicine",
-    heading: "Medicine Department",
+    title: "Mental Health & Counseling",
+    id: "mentalhealth",
+    heading: "Mental Health & Counseling Department",
+    texts: [
+      "Primary care and internal medicine",
+      "Chronic disease management and prevention",
+      "Immunizations and wellness checks",
+      "Holistic and integrative medicine",
+      "Geriatric and pediatric medicine",
+      "Health education and lifestyle coaching",
+      "Individualized medical treatment plans",
+    ],
+  },
+  {
+    img: medicine,
+    title: "Wellness & Preventive Health",
+    id: "wellness",
+    heading: "Wellness & Preventive Health Department",
     texts: [
       "Primary care and internal medicine",
       "Chronic disease management and prevention",

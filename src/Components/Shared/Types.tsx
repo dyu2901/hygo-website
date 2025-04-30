@@ -16,7 +16,8 @@ export enum SelectedService {
   Radiology = "radiology",
   Hygopharmacy = "HYGO Pharmacy",
   Medicine = "medicine",
-  SeeMore = "seemore",
+  GeneralCheckup = "general checkup",
+  SeeMore = "seemore"
 }
 
 // Add this to your Types.tsx if you haven't already

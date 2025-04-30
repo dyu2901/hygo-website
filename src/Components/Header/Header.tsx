@@ -107,6 +107,10 @@ const Header = () => {
                 About HYGO
               </button>
               <button
+                onClick={() => navigate("/founding-team")}
+                className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              > Founding Team </button>
+              <button
                 onClick={() => navigate("/our-mission")}
                 className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
@@ -121,28 +125,49 @@ const Header = () => {
             </div>
           </div>
         </div>
-
         <div className="relative group">
-          <button className="flex items-center text-[#2A5082] hover:text-[#1E88E5] transition-colors">
-            Departments <ChevronDown className="ml-1 h-4 w-4" />
-          </button>
-          <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <div className="py-2">
-              <button
-                onClick={() => navigate("/departments")}
-                className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                All Departments
-              </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Services
-              </button>
-            </div>
+  <button className="flex items-center text-[#2A5082] hover:text-[#1E88E5] transition-colors">
+    Our Services <ChevronDown className="ml-1 h-4 w-4" />
+  </button>
+
+  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+    <div className="py-2">
+      {/* Nested group starts here */}
+      <div className="relative group/consult">
+        <button className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+          Consult a Doctor <ChevronDown className="ml-1 h-4 w-4" />
+        </button>
+
+        {/* Submenu shown only when hovering Consult a Doctor */}
+        <div className="absolute left-full top-0 ml-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover/consult:opacity-100 group-hover/consult:visible transition-all duration-200 z-50">
+          <div className="py-2">
+            <button
+              onClick={() => navigate("/general-consultation")}
+              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            >
+              General Consultation
+            </button>
+            <button
+              onClick={() => navigate("/specialist-consultation")}
+              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            >
+              Specialist Consultation
+            </button>
           </div>
         </div>
+      </div>
+
+      {/* Other menu items */}
+      <button
+        onClick={() => scrollToSection("services")}
+        className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      >
+        Services
+      </button>
+    </div>
+  </div>
+</div>
+
 
         <div className="relative group">
           <button className="flex items-center text-[#2A5082] hover:text-[#1E88E5] transition-colors">
@@ -176,11 +201,11 @@ const Header = () => {
           onClick={() => navigate("/patient-resources")}
           className="text-[#2A5082] hover:text-[#1E88E5] transition-colors"
         >
-          Patient Resources
+          Subscriptions
         </button>
 
         <button onClick={() => navigate("/news")} className="text-[#2A5082] hover:text-[#1E88E5] transition-colors">
-          News
+          Contact Us
         </button>
 
         <button
@@ -233,7 +258,7 @@ const Header = () => {
                 }}
                 className="block w-full text-left py-2 text-[#2A5082]"
               >
-                Departments
+                Our Services
               </button>
               <button
                 onClick={() => {
@@ -283,7 +308,7 @@ const Header = () => {
               }}
               className="block w-full text-left py-2 text-[#2A5082] border-b pb-2"
             >
-              Patient Resources
+              Subscriptions
             </button>
 
             <button

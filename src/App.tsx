@@ -9,6 +9,7 @@ import Services from "./Components/Main/Services/Services"
 import Reviews from "./Components/Main/Review/Reviews"
 import Doctors from "./Components/Main/Doctors/Doctors"
 import About from "./Components/Main/About/about"
+import FoundingTeam from "./Components/Main/About/FoundingTeam"
 import OurMission from "./Components/Main/About/OurMission"
 import OurVision from "./Components/Main/About/OurVision"
 import AboutHYGO from "./Components/Main/About/AboutHYGO"
@@ -35,6 +36,7 @@ function App() {
             <Route path="/our-mission" element={<OurMission />} />
             <Route path="/our-vision" element={<OurVision />} />
             <Route path="/about" element={<About />} />
+            <Route path="/founding-team" element={<FoundingTeam />} />
             <Route path="/about-hygo" element={<AboutHYGO />} />
             <Route path="/departments" element={<Departments />} />
             <Route path="/patient-resources" element={<PatientResources />} />
