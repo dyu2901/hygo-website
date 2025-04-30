@@ -296,7 +296,7 @@ export const DoctorsData = {
           <img
             src={Banner2}
             alt="Healthcare partnership"
-            className="rounded-xl shadow-md w-full max-w-sm mx-auto object-cover"
+            className="rounded-xl shadow-md w-full max-w-sm mx-auto object-cover md:max-w-full md:h-auto"
           />
         </div>
       </div>
