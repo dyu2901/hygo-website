@@ -137,14 +137,21 @@ const Header = () => {
       </form>
 
       {/* Mobile Search Toggle */}
-      <button className="md:hidden text-[#2A5082]" onClick={() => setIsSearchOpen(!isSearchOpen)}>
-        <Search className="w-6 h-6" />
-      </button>
+      {/* Search Button */}
+{/* Mobile Icons Container */}
+<div className="md:hidden flex items-center space-x-4 text-[#2A5082]">
+  {/* Search Button */}
+  <button onClick={() => setIsSearchOpen(!isSearchOpen)}>
+    <Search className="w-6 h-6" />
+  </button>
 
-      {/* Mobile Menu Button */}
-      <button className="md:hidden text-[#2A5082] ml-4" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
+  {/* Mobile Menu Button */}
+  <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+    {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+  </button>
+</div>
+
+
 
       {/* Mobile Search Bar */}
       {isSearchOpen && (
