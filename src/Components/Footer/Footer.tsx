@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2A5082] text-white">
+    <footer className="bg-[#0E3293] text-white">
       <div className="container mx-auto px-4 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* About Section */}
@@ -100,7 +100,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-start">
-                <Clock className="w-5 h-5 text-[#4FC3F7] mr-3 mt-1 flex-shrink-0" />
+                <Clock className="w-5 h-5 text-[#0E3293] mr-3 mt-1 flex-shrink-0" />
                 <span>
                   Monday - Friday: 8:00 AM - 6:00 PM
                   <br />
@@ -125,11 +125,11 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="px-4 py-3 rounded-full bg-[#2A5082] border border-[#4FC3F7] text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4FC3F7] min-w-[250px]"
+                  className="px-4 py-3 rounded-full bg-White border border-[#0E3293] text-white placeholder-[#0E3293] focus:outline-none focus:ring-2 focus:ring-[#4FC3F7] min-w-[250px]"
                 />
                 <button
                   type="submit"
-                  className="bg-[#4FC3F7] hover:bg-[#29B6F6] text-[#2A5082] font-medium px-6 py-3 rounded-full transition-colors"
+                  className="bg-[#0E3293] hover:bg-[#29B6F6] text-[#FFFFFF] font-medium px-6 py-3 rounded-full transition-colors"
                 >
                   Subscribe
                 </button>

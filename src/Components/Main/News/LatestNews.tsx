@@ -36,7 +36,7 @@ const LatestNews = () => {
   return (
     <div className="container mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#2A5082] mb-4">Latest News & Updates</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#0E3293] mb-4">Latest News & Updates</h2>
         <p className="text-gray-600 max-w-3xl mx-auto">
           Stay informed about the latest developments, research breakthroughs, and events at HYGO Healthcare.
         </p>
@@ -60,7 +60,7 @@ const LatestNews = () => {
                   {item.date}
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-[#2A5082] mb-2">{item.title}</h3>
+              <h3 className="text-xl font-bold text-[#0E3293] mb-2">{item.title}</h3>
               <p className="text-gray-600 mb-4">{item.excerpt}</p>
               <button className="text-[#1E88E5] font-medium hover:underline flex items-center">
                 Read more
@@ -76,7 +76,7 @@ const LatestNews = () => {
       <div className="mt-12 text-center">
         <button
           onClick={() => navigate("/news")}
-          className="bg-white border border-[#1E88E5] text-[#1E88E5] hover:bg-[#E3F2FD] px-8 py-3 rounded-full transition-colors text-lg font-medium"
+          className="bg-white border border-[#0E3293] text-[#0E3293] hover:bg-[#E3F2FD] px-8 py-3 rounded-full transition-colors text-lg font-medium"
         >
           View All News
         </button>

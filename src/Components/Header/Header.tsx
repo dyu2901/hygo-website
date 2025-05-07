@@ -106,7 +106,12 @@ const Header = () => {
       } transition-all duration-300 fixed top-0 z-50 w-full p-4 md:px-20`}
     >
       <div onClick={() => navigate("/")} className="cursor-pointer">
-        <img className="w-24 md:w-32" src={Logo || "/placeholder.svg"} alt="HYGO Healthcare Logo" />
+        <img
+          className="w-24 md:w-32"
+          src={Logo || "/placeholder.svg"}
+          alt="HYGO Healthcare Logo"
+          style={{ filter: "hue-rotate(90deg)" }} // Adjust the hue-rotate value to change the color
+        />
       </div>
 
       {/* Search Bar - Desktop */}
@@ -205,7 +210,7 @@ const Header = () => {
       {/* Desktop Menu */}
       <nav className="hidden md:flex items-center space-x-6">
         <div className="relative group">
-          <button className="flex items-center text-[#2A5082] hover:text-[#1E88E5] transition-colors">
+          <button className="flex items-center text-[#0E3293] hover:text-[#1E88E5] transition-colors">
             About <ChevronDown className="ml-1 h-4 w-4" />
           </button>
           <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -267,12 +272,36 @@ const Header = () => {
                 </div>
               </div>
 
-              {/* Other menu items */}
+              {/* Updated menu items */}
               <button
-                onClick={() => scrollToSection("services")}
+                onClick={() => navigate("/physiotherapy")}
                 className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Services
+                Physiotherapy
+              </button>
+              <button
+                onClick={() => navigate("/wellness")}
+                className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                Wellness
+              </button>
+              <button
+                onClick={() => navigate("/laboratories")}
+                className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                Laboratories
+              </button>
+              <button
+                onClick={() => navigate("/pharmacy")}
+                className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                Pharmacy
+              </button>
+              <button
+                onClick={() => navigate("/at-home-services")}
+                className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                At Home Services
               </button>
             </div>
           </div>
@@ -319,7 +348,7 @@ const Header = () => {
 
         <button
           onClick={() => navigate("/appointment")}
-          className="bg-[#1E88E5] hover:bg-[#1976D2] text-white px-4 py-2 rounded-full transition-colors"
+          className="bg-[#0E3293] hover:bg-[#1976D2] text-white px-4 py-2 rounded-full transition-colors"
         >
           Book Appointment
         </button>
@@ -424,23 +453,51 @@ const Header = () => {
                     </div>
                   )}
                   
+                  {/* Updated menu items */}
                   <button
                     onClick={() => {
                       setIsMenuOpen(false)
-                      navigate("/departments")
+                      navigate("/physiotherapy")
                     }}
                     className="block w-full text-left py-2 text-[#2A5082]"
                   >
-                    Our Services
+                    Physiotherapy
                   </button>
                   <button
                     onClick={() => {
                       setIsMenuOpen(false)
-                      scrollToSection("services")
+                      navigate("/wellness")
                     }}
                     className="block w-full text-left py-2 text-[#2A5082]"
                   >
-                    Services
+                    Wellness
+                  </button>
+                  <button
+                    onClick={() => {
+                      setIsMenuOpen(false)
+                      navigate("/laboratories")
+                    }}
+                    className="block w-full text-left py-2 text-[#2A5082]"
+                  >
+                    Laboratories
+                  </button>
+                  <button
+                    onClick={() => {
+                      setIsMenuOpen(false)
+                      navigate("/pharmacy")
+                    }}
+                    className="block w-full text-left py-2 text-[#2A5082]"
+                  >
+                    Pharmacy
+                  </button>
+                  <button
+                    onClick={() => {
+                      setIsMenuOpen(false)
+                      navigate("/at-home-services")
+                    }}
+                    className="block w-full text-left py-2 text-[#2A5082]"
+                  >
+                    At Home Services
                   </button>
                 </div>
               )}
@@ -514,7 +571,7 @@ const Header = () => {
                 setIsMenuOpen(false)
                 navigate("/appointment")
               }}
-              className="bg-[#1E88E5] hover:bg-[#1976D2] text-white px-4 py-2 rounded-full transition-colors text-center"
+              className="bg-[#0E3293] hover:bg-[#1976D2] text-white px-4 py-2 rounded-full transition-colors"
             >
               Book Appointment
             </button>

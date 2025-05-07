@@ -9,7 +9,7 @@ const Doctors = () => {
       <div className="space-y-20">
         {/* Heading Section */}
         <div>
-          <h3 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-[#4A44BE]">{DoctorsData.heading}</h3>
+          <h3 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-[#0E3293]">{DoctorsData.heading}</h3>
 
           {/* Doctor Cards Section */}
           <div className="flex flex-wrap justify-center gap-8 px-4">
@@ -34,7 +34,7 @@ const Doctors = () => {
 
         {/* Description Section */}
         <div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-[#4A44BE]">{DoctorsData.heading2}</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-[#0E3293]">{DoctorsData.heading2}</h2>
           <p className="text-center text-base sm:text-lg max-w-2xl mx-auto mb-12 text-gray-600">{DoctorsData.desc}</p>
         </div>
       </div>

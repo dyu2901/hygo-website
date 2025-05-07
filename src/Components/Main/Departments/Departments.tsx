@@ -20,82 +20,82 @@ const Departments = () => {
       name: "Cardiology",
       description:
         "Comprehensive heart care from prevention to advanced treatments for heart disease, heart failure, and arrhythmias.",
-      icon: <Heart className="w-12 h-12 text-[#1E88E5]" />,
+      icon: <Heart className="w-12 h-12 text-[#0E3293]" />,
       color: "bg-[#E3F2FD]",
     },
     {
       name: "Neurology",
       description:
         "Expert care for conditions affecting the brain and nervous system, including stroke, epilepsy, and neurodegenerative disorders.",
-      icon: <Brain className="w-12 h-12 text-[#1E88E5]" />,
+      icon: <Brain className="w-12 h-12 text-[#0E3293]" />,
       color: "bg-[#E8F5E9]",
     },
     {
       name: "Internal Medicine",
       description:
         "Primary care for adults focusing on prevention, diagnosis, and treatment of adult diseases and chronic conditions.",
-      icon: <Stethoscope className="w-12 h-12 text-[#1E88E5]" />,
+      icon: <Stethoscope className="w-12 h-12 text-[#0E3293]" />,
       color: "bg-[#E3F2FD]",
     },
     {
       name: "Orthopedics",
       description:
         "Specialized care for bones, joints, and musculoskeletal conditions, including joint replacement and sports medicine.",
-      icon: <Bone className="w-12 h-12 text-[#1E88E5]" />,
+      icon: <Bone className="w-12 h-12 text-[#0E3293]" />,
       color: "bg-[#E8F5E9]",
     },
     {
       name: "Ophthalmology",
       description:
         "Complete eye care from routine exams to complex surgeries, treating cataracts, glaucoma, and retinal disorders.",
-      icon: <Eye className="w-12 h-12 text-[#1E88E5]" />,
+      icon: <Eye className="w-12 h-12 text-[#0E3293]" />,
       color: "bg-[#E3F2FD]",
     },
     {
       name: "Pathology",
       description:
         "Advanced diagnostic testing and laboratory services for accurate disease diagnosis and treatment monitoring.",
-      icon: <Microscope className="w-12 h-12 text-[#1E88E5]" />,
+      icon: <Microscope className="w-12 h-12 text-[#0E3293]" />,
       color: "bg-[#E8F5E9]",
     },
     {
       name: "Pediatrics",
       description:
         "Specialized healthcare for infants, children, and adolescents, from preventive care to treatment of childhood illnesses.",
-      icon: <Baby className="w-12 h-12 text-[#1E88E5]" />,
+      icon: <Baby className="w-12 h-12 text-[#0E3293]" />,
       color: "bg-[#E3F2FD]",
     },
     {
       name: "Pharmacy",
       description:
         "Comprehensive medication management and pharmaceutical services, ensuring safe and effective medication therapy.",
-      icon: <Pill className="w-12 h-12 text-[#1E88E5]" />,
+      icon: <Pill className="w-12 h-12 text-[#0E3293]" />,
       color: "bg-[#E8F5E9]",
     },
     {
       name: "Pulmonology",
       description: "Diagnosis and treatment of respiratory conditions including asthma, COPD, and sleep disorders.",
-      icon: <Lungs className="w-12 h-12 text-[#1E88E5]" />,
+      icon: <Lungs className="w-12 h-12 text-[#0E3293]" />,
       color: "bg-[#E3F2FD]",
     },
     {
       name: "Nephrology",
       description:
         "Specialized care for kidney diseases, including chronic kidney disease, dialysis, and transplant management.",
-      icon: <Kidney className="w-12 h-12 text-[#1E88E5]" />,
+      icon: <Kidney className="w-12 h-12 text-[#0E3293]" />,
       color: "bg-[#E8F5E9]",
     },
     {
       name: "Laboratory Services",
       description:
         "Comprehensive diagnostic testing services supporting all medical departments with accurate and timely results.",
-      icon: <Flask className="w-12 h-12 text-[#1E88E5]" />,
+      icon: <Flask className="w-12 h-12 text-[#0E3293]" />,
       color: "bg-[#E3F2FD]",
     },
     {
       name: "Vaccination Center",
       description: "Preventive care through immunizations for all age groups, protecting against infectious diseases.",
-      icon: <Syringe className="w-12 h-12 text-[#1E88E5]" />,
+      icon: <Syringe className="w-12 h-12 text-[#]" />,
       color: "bg-[#E8F5E9]",
     },
   ]
@@ -114,7 +114,7 @@ const Departments = () => {
         {departments.map((dept, index) => (
           <div key={index} className={`${dept.color} p-8 rounded-xl hover:shadow-lg transition-all duration-300`}>
             <div className="mb-4">{dept.icon}</div>
-            <h3 className="text-2xl font-semibold text-[#2A5082] mb-3">{dept.name}</h3>
+            <h3 className="text-2xl font-semibold text-[#0E3293] mb-3">{dept.name}</h3>
             <p className="text-gray-700 mb-4">{dept.description}</p>
             <button className="text-[#1E88E5] font-medium hover:underline flex items-center">
               Learn more

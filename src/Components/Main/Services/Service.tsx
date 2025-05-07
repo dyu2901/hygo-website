@@ -9,17 +9,18 @@ type Props = {
   service: {
     img: string
     title: string
+    id: string
   }
 }
 
 const Service = ({ SelectService, setSelectService, service }: Props) => {
-  const lowerCaseService = service.title.toLowerCase().replace(/\s+/g, "") as SelectedService
+  const lowerCaseService = service.id as SelectedService
   return (
     <div
       onClick={() => setSelectService(lowerCaseService)}
       className={`${
         SelectService === lowerCaseService
-          ? "bg-[#4A44BE] text-white scale-105 rounded-3xl"
+          ? "bg-[#0E3293] text-white scale-105 rounded-3xl"
           : "bg-white hover:bg-[#e6f9ff] hover:scale-105"
       } cursor-pointer transition-all duration-300 rounded-2xl flex flex-col items-center gap-4 p-4 lg:p-8 shadow-lg hover:shadow-xl`}
     >

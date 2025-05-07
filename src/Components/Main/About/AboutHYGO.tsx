@@ -36,7 +36,7 @@ const doctors = [
     name: "Dr. Shrut Vasavada",
     title: "Consultant Spine Surgeon, MBBS, MS (Orthopaedics), FISS, FMISS",
     description:
-    "Dr. Shrut Vasavada is a fellowship-trained spine surgeon specializing in minimally invasive and endoscopic spine surgery. He is dedicated to advancing precision in spine care, with a focus on faster recovery and enhanced patient outcomes through cutting-edge techniques."
+      "Dr. Shrut Vasavada is a fellowship-trained spine surgeon specializing in minimally invasive and endoscopic spine surgery. He is dedicated to advancing precision in spine care, with a focus on faster recovery and enhanced patient outcomes through cutting-edge techniques.",
   },
   {
     img: DoctorImage4,
@@ -53,7 +53,22 @@ const AboutHYGO = () => (
     id="about-hygo"
   >
     <div className="max-w-[1250px] mx-auto">
-      <h1 className="text-[2.75rem] font-bold text-[#4A44BE] leading-tight text-center mb-12">Healing starts here</h1>
+      <button
+        onClick={() => window.history.back()}
+        className="mb-6 text-[#0E3293] hover:text-[#1976D2] font-medium transition-colors flex items-center"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+        Back
+      </button>
+      <h1 className="text-[2.75rem] font-bold text-[#0E3293] leading-tight text-center mb-12">Healing starts here</h1>
       {doctors.map((doctor, index) => (
         <div
           key={index}

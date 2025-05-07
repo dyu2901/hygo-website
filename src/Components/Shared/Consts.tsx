@@ -8,6 +8,7 @@ import dentistry from "@/assets/Images/Icons/Dentistry.png"
 import radiology from "@/assets/Images/Icons/Radiology.png"
 import medicine from "@/assets/Images/Icons/Medicine.png"
 import seeMoreImage from "@/assets/Images/Icons/seeMoreImage.png"
+import Pathology from "@/assets/Images/Icons/Pathology.png"
 
 import Banner1 from "@/assets/Images/Banner1.png"
 import Banner2 from "@/assets/Images/Banner2.png"
@@ -31,62 +32,74 @@ export const descNums = [
   {
     num: "100+",
     text: "Expert Doctors",
-    color: "#4A44BE",
+    color: "#0E3293",
   },
   {
     num: "5k+",
     text: "Happy Patients",
-    color: "#4A44BE",
+    color: "#0E3293",
   },
   {
     num: "24/7",
     text: "Emergency Service",
-    color: "#4A44BE",
+    color: "#0E3293",
   },
   {
     num: "20+",
     text: "Medical Laboratories",
-    color: "#4A44BE",
+    color: "#0E3293",
   },
   {
     num: "2k+",
     text: "Home Visits",
-    color: "#4A44BE",
+    color: "#0E3293",
   },
 ]
 
 export const ServicesData = [
   {
     img: healthcare,
-    title: "Genral Checkup",
-    id: "generalcheckup", 
-    heading: "General Checkup Department",
-    color: "#4A44BE",
+    title: "Doctor Consultation",
+    id: "doctorconsultation",
+    heading: "Doctor Consultation Department",
+    color: "#0E3293",
     texts: [
-      "Primary care and family medicine",
-      "Preventive health and wellness",
-      "Chronic disease management",
-      "Vaccinations and immunizations",
-      "Health screenings and check-ups",
-      "Home health and hospice care",
-      "Health education and lifestyle advice",
+      "General Physician",
+      "Allergist/Immunologist",
+    "Cardiologist (as per availability)",
+    "Dentist",
+    "Dermatologist",
+    "Endocrinologist",
+    "ENT Specialist",
+    "Gastroenterologist",
+    "General Surgeon",
+    "Gynecologist",
+    "Infectious Disease Specialist",
+    "Nephrologist",
+    "Oncologist",
+    "Ophthalmologist (Eye Specialist)",
+    "Orthopedic",
+    "Pediatrician",
+    "Plastic Surgeon",
+    "Psychiatrist",
+    "Pulmonologist",
+    "Rheumatologist",
+    "Urologist",
+    "Vascular Surgeon",
     ],
   },
   {
-    img: cardiology,
+    img: Pathology, // Replace 'Pathology' with an existing variable or import the correct image
     title: "Pathology",
     id: "pathology",
     heading: "Pathology Department",
     texts: [
-      "Electrocardiogram (ECG)",
-      "Echocardiogram",
-      "Color Doppler Echo",
-      "Dobutamine Stress Echo (DSE)",
-      "Transesophageal Echo (TEE)",
-      "Exercise Tolerance Test (ETT/TMT)",
-      "Halter monitor",
-      "24 Hour Ambulatory BP monitor",
-      "Tilt Test/Tilt Table Test",
+      "Blood tests (CBC, lipid profile, liver function, etc.)",
+      "Urine and stool analysis",
+      "Thyroid function tests",
+      "Hormonal panels",
+      "Infection screenings (e.g., dengue, malaria, COVID)",
+      
     ],
   },
   {
@@ -95,28 +108,27 @@ export const ServicesData = [
     id: "physiotherapy",
     heading: "Physiotherapy Department",
     texts: [
-      "Orthopedic surgery and joint replacements",
-      "Sports injury and trauma care",
-      "Physical therapy and rehabilitation",
-      "Spine and back pain solutions",
-      "Arthritis and joint disorder treatment",
-      "Orthopedic consultations",
-      "Customized orthopedic care plans",
+      "Pain management (e.g., back, neck, joint pain)",
+      "Post-surgery rehab",
+      "Neurological physiotherapy (stroke, Parkinson’s)",
+      "Pediatric physiotherapy",
+      "Sports injury therapyt",
+      
     ],
   },
   {
     img: surgery,
-    title: "Clinical Nutricion",
+    title: "Clinical Nutrition",
     id: "clinicalnutrition",
     heading: "Clinical Nutrition Department",
     texts: [
-      "Minimally invasive and laparoscopic surgery",
-      "Gastrointestinal surgery and endoscopy",
-      "Plastic and reconstructive surgery",
-      "Cancer and tumor resection",
-      "Post-operative care and recovery",
-      "Surgical consultations",
-      "Emergency surgical interventions",
+      "Weight management programs",
+      "Diabetes and hypertension diet plans",
+      "Nutrition counseling for children, elderly, and pregnancy",
+      "PCOD/PCOS nutrition management",
+      "Sports nutrition",
+      "Personalized meal planning",
+
     ],
   },
   {
@@ -125,28 +137,24 @@ export const ServicesData = [
     id: "homecare",
     heading: "Home Care Department",
     texts: [
-      "Routine dental check-ups and cleanings",
-      "Cosmetic dentistry and teeth whitening",
-      "Oral surgery and extractions",
-      "Dental implants and restorations",
-      "Pediatric and family dentistry",
-      "Gum disease treatment",
-      "Orthodontic and braces options",
+      "Doctor/nurse home visits",
+      "Physiotherapy at home",
+      "Medication administration",
+      "Chronic illness monitoring",
+      "Elderly care",
     ],
   },
   {
     img: radiology,
-    title: "Visiting Doctor OPD",
-    id: "visitingdoctoropd",
-    heading: "Visiting Doctor OPD Department",
+    title: "Mental Health & Counseling",
+    id: "mentalhealth",
+    heading: "Mental Health & Counseling Department",
     texts: [
-      "Advanced diagnostic imaging services",
-      "Mammography and breast health screening",
-      "Interventional radiology procedures",
-      "Virtual colonoscopy and body scans",
-      "Radiology consultations",
-      "Fast and accurate imaging results",
-      "State-of-the-art radiology technology",
+      "Psychologist consultations",
+      "Counseling for stress, anxiety, depression",
+      "Family and relationship counseling",
+      "Substance abuse support",
+     
     ],
   },
   {
@@ -155,28 +163,11 @@ export const ServicesData = [
     id: "hygopharmacy",
     heading: "Hygo Pharmacy Department",
     texts: [
-      "Prescription and over-the-counter medications",
-      "Vaccinations and immunizations",
-      "Health and wellness products",
-      "Pharmaceutical consultations",
-      "Medication management and reviews",
-      "Home delivery and convenient pickup",
-      "Personalized health advice",
-    ],
-  },
-  {
-    img: medicine,
-    title: "Mental Health & Counseling",
-    id: "mentalhealth",
-    heading: "Mental Health & Counseling Department",
-    texts: [
-      "Primary care and internal medicine",
-      "Chronic disease management and prevention",
-      "Immunizations and wellness checks",
-      "Holistic and integrative medicine",
-      "Geriatric and pediatric medicine",
-      "Health education and lifestyle coaching",
-      "Individualized medical treatment plans",
+      "Prescription dispensings",
+      "Over-the-counter medications",
+      "Health supplements and vitamins",
+      "Medication counseling",
+      "Home delivery service (optional)",
     ],
   },
   {
@@ -185,13 +176,11 @@ export const ServicesData = [
     id: "wellness",
     heading: "Wellness & Preventive Health Department",
     texts: [
-      "Primary care and internal medicine",
-      "Chronic disease management and prevention",
-      "Immunizations and wellness checks",
-      "Holistic and integrative medicine",
-      "Geriatric and pediatric medicine",
-      "Health education and lifestyle coaching",
-      "Individualized medical treatment plans",
+      "Annual health check-up packages",
+      "Lifestyle disease management",
+      "Smoking cessation program",
+      "Corporate wellness programs",
+
     ],
   },
   {
@@ -213,7 +202,7 @@ export const ServicesData = [
 
 export const Banner1Data = {
   heading: "We Are Providing Essential Health Care",
-  color: "#4A44BE",
+  color: "#0E3293",
   texts: [
     "ESSENTIAL HEALTH CARD",
     "1 Clinical Assessment visits",
@@ -227,7 +216,7 @@ export const Banner1Data = {
 
 export const Banner3Data = {
   heading: "We Are Providing Comprehensive Health Care",
-  color: "#4A44BE",
+  color: "#0E3293",
   texts: [
     "COMPREHENSIVE HEALTH CARD",
     "2 Clinical Assessment visits",
@@ -242,14 +231,14 @@ export const Banner3Data = {
 }
 
 export const DoctorsData = {
-  heading: "Meet Our Specialists",
-  color: "#4A44BE",
+  heading: "Find Doctor",
+  color: "#0E3293",
   doctors: [
     {
       img: doc1,
       name: "Dr. Haard Vasavada",
       job: "MS, MCH (Neuro), WFNS Fellow Consultant Neurosurgeon",
-      color: "#4A44BE",
+      color: "#0E3293",
     },
     {
       img: doc2,
@@ -267,53 +256,63 @@ export const DoctorsData = {
       job: "MBBS, MS, MCH (Neuro), WFNS Fellow Consultant Neurosurgeon",
     },
   ],
-  heading2: <h2 className="text-3xl sm:text-4xl font-bold text-[#4A44BE] mb-4 animate-slide-in">Who We Are?</h2>,
-  color2: "#4A44BE",
+  heading2: (
+    <h2 className="text-3xl sm:text-4xl font-bold text-[#0E3293] mb-8 text-center animate-fade-in">
+      Why Choose Us?
+    </h2>
+  ),
   desc: (
-    <div className="bg-white py-12 px-4 sm:px-8 md:px-16">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8">
-        <div className="flex-1">
-          <p className="text-xs text-gray-600 mb-2">Our impact</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-snug">Building a healthier world</h2>
-          <p className="text-sm text-gray-700 mb-4 leading-relaxed">
-            We think big and act boldly to improve the health of communities and accelerate equality and diversity in
-            health care...
+    <div className="w-full min-h-screen bg-[#f9fafb] flex items-center justify-center py-16 px-6 sm:px-12 lg:px-24">
+      <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-12">
+  
+        {/* Left: Content Container */}
+        <div className="w-full lg:w-1/2 space-y-6">
+          <p className="text-lg text-[#0E3293] font-semibold uppercase tracking-wide">
+            Our Commitment to You
           </p>
-          <p className="text-sm text-gray-700 leading-relaxed">
-            <strong className="text-gray-900">Improving health equity</strong>
-            <br />
-            We partner with community organizations to{" "}
-            <a href="#" className="text-blue-600 underline hover:text-blue-800 transition">
-              end health disparities
-            </a>{" "}
-            ...
+          <h3 className="text-4xl font-bold text-gray-800 leading-tight">
+            Trusted, Personalized, and Modern Healthcare Services
+          </h3>
+          <p className="text-gray-600 text-lg leading-relaxed">
+            With expert doctors and modern facilities, we ensure you and your family get the care you deserve. Compassionate service meets cutting-edge treatment.
           </p>
-          <button className="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition duration-300 text-sm">
-            Explore our community engagement
+          <ul className="list-disc list-inside space-y-3 text-gray-700 text-base">
+            <li>Expert medical staff & advanced diagnostics</li>
+            <li>Comprehensive in-home care options</li>
+            <li>24/7 emergency support and accessibility</li>
+            <li>Affordable health packages for all</li>
+          </ul>
+          <button className="mt-4 px-6 py-3 bg-[#0E3293] text-white rounded-full hover:bg-[#09206c] transition duration-300 text-base">
+            Learn More About Us
           </button>
         </div>
-        <div className="flex-1">
+  
+        {/* Right: Image Container */}
+        <div className="w-full lg:w-1/2 flex justify-center">
           <img
             src={Banner2}
-            alt="Healthcare partnership"
-            className="rounded-xl shadow-md w-full max-w-sm mx-auto object-cover md:max-w-full md:h-auto"
+            alt="Healthcare Excellence"
+            className="rounded-2xl shadow-2xl w-full max-w-[600px] object-cover"
           />
         </div>
       </div>
     </div>
   ),
+  
+  
+  
 }
 
 export const FeedbackData = {
   heading: "Patient Feedback",
-  color: "#4A44BE",
+  color: "#0E3293",
   feedbacks: [
     {
       img: user1,
       name: "Ralph Edwards",
       job: "Businessman",
       desc: "My experience with this hospital...",
-      color: "#4A44BE",
+      color: "#0E3293",
     },
     {
       img: user2,

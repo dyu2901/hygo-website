@@ -1,4 +1,3 @@
-
 export enum SelectedPage {
   Home = "home",
   About = "about",
@@ -14,14 +13,20 @@ export enum SelectedService {
   Surgery = "surgery",
   Dentistry = "dentistry",
   Radiology = "radiology",
-  Hygopharmacy = "HYGO Pharmacy",
+  Hygopharmacy = "hygopharmacy", // Fixed casing
   Medicine = "medicine",
   GeneralCheckup = "general checkup",
-  SeeMore = "seemore"
+  Wellness = "wellness", // Ensure this matches Consts.tsx
+  MentalHealth = "mentalhealth", // Ensure this matches Consts.tsx
+  Physiotherapy = "physiotherapy", // Added to match Consts.tsx
+  ClinicalNutrition = "clinicalnutrition", // Added to match Consts.tsx
+  HomeCare = "homecare", // Added to match Consts.tsx
+  DoctorConsultation = "doctorconsultation", // Added to match Consts.tsx
+  SeeMore = "seemore",
 }
 
 // Add this to your Types.tsx if you haven't already
 export const SharedColors = {
-  heading2: "#4A44BE",
-  primary: "#4A44BE",
+  heading2: "#0E3293",
+  primary: "#0E3293",
 }

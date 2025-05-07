@@ -45,7 +45,7 @@ const QuickAppointment = () => {
       <div className="bg-gradient-to-r from-[#E3F2FD] to-[#E8F5E9] rounded-2xl overflow-hidden shadow-xl">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-[#2A5082] mb-4">Request an Appointment</h2>
+            <h2 className="text-3xl font-bold text-[#0E3293] mb-4">Request an Appointment</h2>
             <p className="text-gray-700 mb-8">
               Fill out the form below to request an appointment with our specialists. We'll contact you shortly to
               confirm your appointment time.
@@ -200,14 +200,14 @@ const QuickAppointment = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#1E88E5] hover:bg-[#1976D2] text-white py-3 px-6 rounded-lg transition-colors font-medium text-lg"
+                className="w-full bg-[#0E3293] hover:bg-[#1976D2] text-white py-3 px-6 rounded-lg transition-colors font-medium text-lg"
               >
                 Request Appointment
               </button>
             </form>
           </div>
 
-          <div className="bg-[#2A5082] text-white p-8 md:p-12 flex flex-col justify-center">
+          <div className="bg-[#0E3293] text-white p-8 md:p-12 flex flex-col justify-center">
             <h3 className="text-2xl font-bold mb-6">Why Choose HYGO for Your Care</h3>
 
             <div className="space-y-6">

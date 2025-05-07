@@ -1,6 +1,10 @@
 import { Calendar, User, Tag } from "lucide-react"
-import React from "react"
+import React, { useState } from "react"
+
 const News = () => {
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 3
+
   const newsItems = [
     {
       title: "HYGO Introduces New Advanced Cardiac Care Center",
@@ -78,10 +82,22 @@ const News = () => {
     "Events",
   ]
 
+  const totalPages = Math.ceil(newsItems.length / itemsPerPage)
+  const paginatedItems = newsItems.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  )
+
+  const handlePageChange = (page: number) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page)
+    }
+  }
+
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-[#2A5082] mb-4">News & Updates</h1>
+        <h1 className="text-4xl font-bold text-[#0E3293] mb-4">News & Updates</h1>
         <p className="text-gray-600 max-w-3xl mx-auto">
           Stay informed about the latest developments, research breakthroughs, and events at HYGO Healthcare.
         </p>
@@ -93,7 +109,7 @@ const News = () => {
             key={index}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
               index === 0
-                ? "bg-[#1E88E5] text-white"
+                ? "bg-[#0E3293] text-white"
                 : "bg-white border border-gray-300 text-gray-700 hover:bg-gray-100"
             }`}
           >
@@ -103,7 +119,7 @@ const News = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {newsItems.map((item, index) => (
+        {paginatedItems.map((item, index) => (
           <div
             key={index}
             className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
@@ -111,7 +127,7 @@ const News = () => {
             <img src={item.image || "/placeholder.svg"} alt={item.title} className="w-full h-48 object-cover" />
             <div className="p-6">
               <div className="flex items-center mb-3">
-                <span className="bg-[#E3F2FD] text-[#1E88E5] text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center">
+                <span className="bg-[#E3F2FD] text-[#0E3293] text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center">
                   <Tag className="w-3 h-3 mr-1" />
                   {item.category}
                 </span>
@@ -141,17 +157,39 @@ const News = () => {
 
       <div className="mt-12 flex justify-center">
         <nav className="inline-flex rounded-md shadow">
-          <button className="px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-l-md hover:bg-gray-50">
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className={`px-4 py-2 text-sm font-medium ${
+              currentPage === 1
+                ? "text-gray-300 bg-gray-100 cursor-not-allowed"
+                : "text-gray-500 bg-white hover:bg-gray-50"
+            } border border-gray-300 rounded-l-md`}
+          >
             Previous
           </button>
-          <button className="px-4 py-2 text-sm font-medium text-white bg-[#1E88E5] border border-[#1E88E5]">1</button>
-          <button className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50">
-            2
-          </button>
-          <button className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50">
-            3
-          </button>
-          <button className="px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-r-md hover:bg-gray-50">
+          {Array.from({ length: totalPages }, (_, i) => (
+            <button
+              key={i + 1}
+              onClick={() => handlePageChange(i + 1)}
+              className={`px-4 py-2 text-sm font-medium ${
+                currentPage === i + 1
+                  ? "text-white bg-[#0E3293] border-[#0E3293]"
+                  : "text-gray-700 bg-white border-gray-300 hover:bg-gray-50"
+              } border`}
+            >
+              {i + 1}
+            </button>
+          ))}
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className={`px-4 py-2 text-sm font-medium ${
+              currentPage === totalPages
+                ? "text-gray-300 bg-gray-100 cursor-not-allowed"
+                : "text-gray-500 bg-white hover:bg-gray-50"
+            } border border-gray-300 rounded-r-md`}
+          >
             Next
           </button>
         </nav>
@@ -160,7 +198,7 @@ const News = () => {
       <div className="mt-16 bg-gradient-to-r from-[#E3F2FD] to-[#E8F5E9] p-8 rounded-xl">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-2/3 mb-6 md:mb-0 md:pr-8">
-            <h3 className="text-2xl font-bold text-[#2A5082] mb-4">Subscribe to Our Newsletter</h3>
+            <h3 className="text-2xl font-bold text-[#0E3293] mb-4">Subscribe to Our Newsletter</h3>
             <p className="text-gray-700 mb-4">
               Stay updated with the latest news, health tips, and upcoming events from HYGO Healthcare. Our newsletter
               is delivered monthly to your inbox.
@@ -171,7 +209,7 @@ const News = () => {
                 placeholder="Your email address"
                 className="flex-grow px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E88E5]"
               />
-              <button className="bg-[#1E88E5] hover:bg-[#1976D2] text-white px-6 py-3 rounded-full transition-colors">
+              <button className="bg-[#0E3293] hover:bg-[#1976D2] text-white px-6 py-3 rounded-full transition-colors">
                 Subscribe
               </button>
             </div>

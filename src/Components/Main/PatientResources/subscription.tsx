@@ -1,5 +1,9 @@
 import { FileText, Download, Phone, Calendar, CreditCard, HelpCircle } from "lucide-react"
+
 import React from "react"
+import Banner1 from "../Services/Banner1";
+import Banner3 from "../Services/Banner3";
+
 const PatientResources = () => {
   const resources = [
     {
@@ -72,7 +76,7 @@ const PatientResources = () => {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-[#2A5082] mb-4">Patient Resources</h1>
+        <h1 className="text-4xl font-bold text-[#0E3293] mb-4">Patient Resources</h1>
         <p className="text-gray-600 max-w-3xl mx-auto">
           We're committed to making your healthcare experience as smooth as possible. Find helpful information and
           resources to prepare for your visit.
@@ -137,7 +141,7 @@ const PatientResources = () => {
               <span>Managing Chronic Pain</span>
             </li>
           </ul>
-          <button className="bg-[#1E88E5] hover:bg-[#1976D2] text-white px-6 py-2 rounded-full transition-colors">
+          <button className="bg-[#0E3293] hover:bg-[#1976D2] text-white px-6 py-2 rounded-full transition-colors">
             Browse All Resources
           </button>
         </div>
@@ -162,7 +166,7 @@ const PatientResources = () => {
               <p className="text-gray-600">Sunday: Closed (Emergency Services Available)</p>
             </div>
           </div>
-          <button className="bg-[#1E88E5] hover:bg-[#1976D2] text-white px-6 py-2 rounded-full transition-colors">
+          <button className="bg-[#0e3293] hover:bg-[#1976D2] text-white px-6 py-2 rounded-full transition-colors">
             Get Directions
           </button>
         </div>
@@ -171,4 +175,5 @@ const PatientResources = () => {
   )
 }
 
+export { Banner1, Banner3 };
 export default PatientResources

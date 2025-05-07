@@ -3,7 +3,7 @@
 import React from "react"
 
 import { useState } from "react"
-import { Calendar, Clock, User, Phone, Mail, MessageSquare, CheckCircle } from "lucide-react"
+import { Calendar, Clock, User, Phone, Mail, MessageSquare, CheckCircle, ArrowLeft } from "lucide-react"
 
 const AppointmentBooking = () => {
   const [step, setStep] = useState(1)
@@ -65,7 +65,7 @@ const AppointmentBooking = () => {
           <div className="w-20 h-20 bg-[#E8F5E9] rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-[#4CAF50]" />
           </div>
-          <h1 className="text-3xl font-bold text-[#2A5082] mb-4">Appointment Request Submitted</h1>
+          <h1 className="text-3xl font-bold text-[#0E3293] mb-4">Appointment Request Submitted</h1>
           <p className="text-gray-600 mb-8">
             Thank you for requesting an appointment with HYGO Healthcare. We have received your request and will contact
             you within 24 hours to confirm your appointment details.
@@ -127,7 +127,7 @@ const AppointmentBooking = () => {
                   isNewPatient: "yes",
                 })
               }}
-              className="bg-white border border-[#1E88E5] text-[#1E88E5] hover:bg-[#E3F2FD] px-8 py-3 rounded-full transition-colors"
+              className="bg-white border border-[#1E88E5] text-[#1E88E5] hover:bg-[#] px-8 py-3 rounded-full transition-colors"
             >
               Book Another Appointment
             </button>
@@ -139,8 +139,17 @@ const AppointmentBooking = () => {
 
   return (
     <div className="container mx-auto px-4 py-16">
+      <div className="mb-6">
+        <button
+          onClick={() => (window.location.href = "/")}
+          className="flex items-center text-[#0E3293] hover:text-[#1976D2] font-medium transition-colors"
+        >
+          <ArrowLeft className="w-5 h-5 mr-2" />
+          Back
+        </button>
+      </div>
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-[#2A5082] mb-4">Book an Appointment</h1>
+        <h1 className="text-4xl font-bold text-[#0E3293] mb-4">Book an Appointment</h1>
         <p className="text-gray-600 max-w-3xl mx-auto">
           Schedule your visit with our healthcare professionals. We're committed to providing you with exceptional care.
         </p>
@@ -314,7 +323,7 @@ const AppointmentBooking = () => {
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="bg-[#1E88E5] hover:bg-[#1976D2] text-white py-3 px-8 rounded-lg transition-colors font-medium"
+                  className="bg-[#0E3293] hover:bg-[#1976D2] text-white py-3 px-8 rounded-lg transition-colors font-medium"
                 >
                   Next
                 </button>
@@ -409,9 +418,51 @@ const AppointmentBooking = () => {
                       required
                     >
                       <option value="">Select Time</option>
-                      <option value="morning">Morning (9AM - 12PM)</option>
-                      <option value="afternoon">Afternoon (1PM - 5PM)</option>
-                      <option value="evening">Evening (6PM - 8PM)</option>
+                      <option value="09:00 AM">09:00 AM</option>
+                      <option value="09:15 AM">09:15 AM</option>
+                      <option value="09:30 AM">09:30 AM</option>
+                      <option value="09:45 AM">09:45 AM</option>
+                      <option value="10:00 AM">10:00 AM</option>
+                      <option value="10:15 AM">10:15 AM</option>
+                      <option value="10:30 AM">10:30 AM</option>
+                      <option value="10:45 AM">10:45 AM</option>
+                      <option value="11:00 AM">11:00 AM</option>
+                      <option value="11:15 AM">11:15 AM</option>
+                      <option value="11:30 AM">11:30 AM</option>
+                      <option value="11:45 AM">11:45 AM</option>
+                      <option value="12:00 PM">12:00 PM</option>
+                      <option value="12:15 PM">12:15 PM</option>
+                      <option value="12:30 PM">12:30 PM</option>
+                      <option value="12:45 PM">12:45 PM</option>
+                      <option value="01:00 PM">01:00 PM</option>
+                      <option value="01:15 PM">01:15 PM</option>
+                      <option value="01:30 PM">01:30 PM</option>
+                      <option value="01:45 PM">01:45 PM</option>
+                      <option value="02:00 PM">02:00 PM</option>
+                      <option value="02:15 PM">02:15 PM</option>
+                      <option value="02:30 PM">02:30 PM</option>
+                      <option value="02:45 PM">02:45 PM</option>
+                      <option value="03:00 PM">03:00 PM</option>
+                      <option value="03:15 PM">03:15 PM</option>
+                      <option value="03:30 PM">03:30 PM</option>
+                      <option value="03:45 PM">03:45 PM</option>
+                      <option value="04:00 PM">04:00 PM</option>
+                      <option value="04:15 PM">04:15 PM</option>
+                      <option value="04:30 PM">04:30 PM</option>
+                      <option value="04:45 PM">04:45 PM</option>
+                      <option value="05:00 PM">05:00 PM</option>
+                      <option value="05:15 PM">05:15 PM</option>
+                      <option value="05:30 PM">05:30 PM</option>
+                      <option value="05:45 PM">05:45 PM</option>
+                      <option value="06:00 PM">06:00 PM</option>
+                      <option value="06:15 PM">06:15 PM</option>
+                      <option value="06:30 PM">06:30 PM</option>
+                      <option value="06:45 PM">06:45 PM</option>
+                      <option value="07:00 PM">07:00 PM</option>
+                      <option value="07:15 PM">07:15 PM</option>
+                      <option value="07:30 PM">07:30 PM</option>
+                      <option value="07:45 PM">07:45 PM</option>
+                      <option value="08:00 PM">08:00 PM</option>
                     </select>
                   </div>
                 </div>
@@ -470,14 +521,14 @@ const AppointmentBooking = () => {
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="bg-white border border-[#1E88E5] text-[#1E88E5] hover:bg-[#E3F2FD] py-3 px-8 rounded-lg transition-colors font-medium"
+                  className="bg-white border border-[#0E3293] text-[#0E3293] hover:bg-[#E3F2FD] py-3 px-8 rounded-lg transition-colors font-medium"
                 >
                   Back
                 </button>
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="bg-[#1E88E5] hover:bg-[#1976D2] text-white py-3 px-8 rounded-lg transition-colors font-medium"
+                  className="bg-[#0E3293] hover:bg-[#1976D2] text-white py-3 px-8 rounded-lg transition-colors font-medium"
                 >
                   Next
                 </button>
@@ -569,13 +620,13 @@ const AppointmentBooking = () => {
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="bg-white border border-[#1E88E5] text-[#1E88E5] hover:bg-[#E3F2FD] py-3 px-8 rounded-lg transition-colors font-medium"
+                  className="bg-white border border-[#0E3293] text-[#0E3293] hover:bg-[#E3F2FD] py-3 px-8 rounded-lg transition-colors font-medium"
                 >
                   Back
                 </button>
                 <button
                   type="submit"
-                  className="bg-[#1E88E5] hover:bg-[#1976D2] text-white py-3 px-8 rounded-lg transition-colors font-medium"
+                  className="bg-[#0E3293] hover:bg-[#1976D2] text-white py-3 px-8 rounded-lg transition-colors font-medium"
                 >
                   Confirm Appointment
                 </button>

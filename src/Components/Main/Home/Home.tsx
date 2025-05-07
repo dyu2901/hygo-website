@@ -74,7 +74,7 @@ const Home = () => {
 
               {/* Text Overlay */}
               <div className="absolute inset-0 flex flex-col justify-center items-start text-left text-white px-8 md:px-16 lg:px-24 z-10">
-                <span className="text-lg sm:text-xl text-[#4FC3F7] font-medium mb-2 animate-fade-in">
+                <span className="text-lg sm:text-xl text-[#0E3293] font-medium mb-2 animate-fade-in">
                   {slide.subtitle}
                 </span>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 text-white drop-shadow-lg animate-slide-in">
@@ -86,7 +86,7 @@ const Home = () => {
                 <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
                   <button
                     onClick={() => navigate("/appointment")}
-                    className="px-8 py-3 bg-[#1E88E5] text-white text-lg font-medium rounded-full shadow-lg hover:bg-[#1976D2] transition-all duration-300"
+                    className="px-8 py-3 bg-[#0E3293] text-white text-lg font-medium rounded-full shadow-lg hover:bg-[#1976D2] transition-all duration-300"
                   >
                     Book an Appointment
                   </button>
@@ -132,6 +132,27 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* Floating Chat Button */}
+      <button
+        onClick={() => alert("Chat feature coming soon!")}
+        className="fixed bottom-8 right-8 bg-[#0E3293] text-white p-4 rounded-full shadow-lg hover:bg-[#1976D2] transition-all duration-300 z-50"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M8 10h.01M12 10h.01M16 10h.01M21 16.5a2.5 2.5 0 01-2.5 2.5H6l-4 4V5.5A2.5 2.5 0 014.5 3h13A2.5 2.5 0 0120 5.5v11z"
+          />
+        </svg>
+      </button>
     </div>
   )
 }
