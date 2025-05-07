@@ -45,10 +45,11 @@ const PatientResources = () => {
       title: "FAQs",
       description: "Find answers to commonly asked questions about our services and procedures.",
       icon: <HelpCircle className="w-10 h-10 text-[#1E88E5]" />,
-      action: "View FAQs",
+      action: "View FAQ",
       actionIcon: null,
     },
   ]
+
 
   const faqs = [
     {
